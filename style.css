@@ -1,0 +1,214 @@
+/* logo  
+font-family: 'Lobster',
+cursive;*/
+/* Main-font
+font-family: 'Poppins',
+sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,300;1,200;1,400&display=swap');
+
+
+:root{
+
+    --clr-main: rgb(231, 0, 0);
+    --bg-color: rgba(22, 20, 20, 1);
+    --clr-text: #f8f6f6;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    height: 100vh;
+}
+
+
+
+
+header{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    width: 100%;
+    /* background-color: var(--bg-color); */
+    background-color: transparent;
+    color: var(--clr-text);
+}
+
+.logo h1{
+    font-family: 'Lobster', cursive;
+    display: inline-block;
+}
+
+.span-title{
+    font-family: 'Lobster', cursive;
+    color: var(--clr-main);
+    
+}
+
+nav{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+
+}
+nav ul{
+    background-color: transparent;
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    transition: all .4s;
+}
+nav ul li:hover{
+    background-color: transparent;
+    border: 0;
+    color: var(--clr-main);
+    transform: translateY(-30%) scale(1.4);
+}
+nav ul li a:hover{
+    color: var(--clr-main);
+    font-weight: bolder;
+    text-shadow: 4px 4px 3px rgb(0, 0, 0);
+}
+nav ul li:active{
+    transform: scale(1);
+}
+nav ul li a{
+    color: var(--clr-text);
+    text-decoration: none;
+    padding: 1rem;
+    font-weight: bold;
+    margin-inline: .5rem;
+}
+nav ul li a.active{
+    box-shadow: 4px 4px 30px var(--clr-main);
+    /* border-radius: 20px; */
+    color: red;
+    text-shadow: 4px 4px 3px rgb(0, 0, 0);
+}
+
+.toggle{
+    position: absolute;
+    top: 2.25rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.75rem;
+    width: 2.25rem;
+    cursor: pointer;
+}
+
+.bars{
+    height: .2rem;
+    width: 100%;
+    background-color: #f8f6f6;
+}
+
+
+
+@media(max-width: 875px){
+    nav ul li.active{
+        box-shadow: 4px 4px 30px var(--clr-main);
+        /* border-radius: 20px; */
+        color: red;
+        text-shadow: 4px 4px 3px rgb(0, 0, 0);
+        border-radius:10px;
+    }
+    nav ul li.active a{
+        color: red;
+    }
+    /* nav ul li:hover {
+            background-color: transparent;
+            transform: scale(1.3);
+            border: 0;
+            border-radius: 10px;
+            color: var(--clr-main);
+            box-shadow: 0 0 100px rgb(0, 0, 0);
+        } */
+            nav ul li:hover {
+                background-color: transparent;
+                border: 0;
+                color: var(--clr-main);
+                transform: scale(1.5);
+                box-shadow: 0 0 100px rgb(0, 0, 0);
+                border-radius: 10px;
+                letter-spacing: 1px;
+            }
+    
+            nav ul li a:hover {
+                color: var(--clr-main);
+                font-weight: bolder;
+                text-shadow: 4px 4px 3px rgb(0, 0, 0);
+                border-radius: 10px;
+            }
+            nav ul li:active{
+                transform: scale(1);
+            }
+
+
+    .toggle{
+        display: flex;
+    }
+    nav{
+        width: 50%;
+        align-self: flex-end;
+        border-radius: 0px 0px 10px 10px;
+        /* padding-top: 2rem; */
+        background-color: rgba(255, 255, 255, 0.2);
+        /* background-color: transparent; */
+        box-shadow: 0 0 50px rgb(0, 0, 0);
+        
+    }
+    .js-hidden{
+        display: none;
+    }
+    .js-reveal{
+        display: flex;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width:100%;
+        padding: 1rem;
+    }
+    nav ul li{
+        padding: .75rem;
+        justify-content: center;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media(max-width: 552px){
+    nav{
+        width: 100%;
+    }
+}
+
+
+#Home{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.651);
+    background-image: url(img/profileExpress.svg);
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+
